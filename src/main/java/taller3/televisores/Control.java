@@ -4,7 +4,7 @@ public class Control {
     private TV tv;
     public void enlazar(TV televisor){
         tv=televisor;
-        televisor.setControl(this);
+        televisor.control=this;
     }
     public TV getTv() {
         return tv;
