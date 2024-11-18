@@ -22,6 +22,8 @@ public class Control {
             tv.setEstado(false);
         }
     }
+    //TestMetodos > testCanalEnlazar() FAILED
+    //Hay un problema con los metodos y restricciones del cambio de canales del televisor desde el control
     public void canalUp(){
         if(tv.getEstado()==true && tv.getCanal()>=1 && tv.getCanal()<120 && tv!=null ){
             tv.setCanal(tv.getCanal()+1);
