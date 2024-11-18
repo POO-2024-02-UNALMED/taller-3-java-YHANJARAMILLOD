@@ -23,23 +23,23 @@ public class Control {
         }
     }
     public void canalUp(){
-        if(tv.getEstado()==true && tv.getCanal()>=1 && tv.getCanal()<=119 && tv!=null ){
+        if(tv.getEstado()==true && tv.getCanal()>=1 && tv.getCanal()<120 && tv!=null ){
             tv.setCanal(tv.getCanal()+1);
         }
     }
     public void canalDown(){
-        if(tv.getEstado()==true && tv.getCanal()>=2 && tv.getCanal()<=120 && tv!=null ){
+        if(tv.getEstado()==true && tv.getCanal()>1 && tv.getCanal()<=120 && tv!=null ){
             tv.setCanal(tv.getCanal()-1);
         }
     }
  
     public void volumenUp(){
-        if(tv.getVolumen()>=0 && tv.getVolumen()<=6 && tv != null){
+        if(tv.getEstado()==true && tv.getVolumen()>=0 && tv.getVolumen()<=6 && tv != null){
             tv.setVolumen(tv.getVolumen()+1);
         }    
     }
     public void volumenDown(){
-        if(tv.getVolumen()>=1 && tv.getVolumen()<=7 && tv != null){
+        if(tv.getEstado()==true && tv.getVolumen()>=1 && tv.getVolumen()<=7 && tv != null){
             tv.setVolumen(tv.getVolumen()-1);
         }    
     }   

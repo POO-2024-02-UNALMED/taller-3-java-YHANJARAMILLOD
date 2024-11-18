@@ -60,28 +60,28 @@ public class TV {
         this.estado=estado;
     }
     public int canalUp(){
-        if(this.estado==true && canal>=1 && canal<=119){
+        if(this.estado==true && canal>=1 && canal<120){
             canal=getCanal()+1;
             return canal;
         }
         return canal;
     }
     public int canalDown(){
-        if(this.estado==true && canal>=2 && canal<=120){
+        if(this.estado==true && canal>1 && canal<=120){
             canal=getCanal()-1;
             return canal;
         }
         return canal;
     }
     public int volumenUp(){
-        if(this.volumen>=0 && this.volumen<=6){
+        if(this.estado==true && this.volumen>=0 && this.volumen<=6){
             volumen=getVolumen()+1;
             return volumen;
         }
         return volumen; 
     }
     public int volumenDown(){
-        if(this.volumen>=1 && this.volumen<=7){
+        if(this.estado==true && this.volumen>=1 && this.volumen<=7){
             volumen=getVolumen()-1;
             return volumen;
         }
