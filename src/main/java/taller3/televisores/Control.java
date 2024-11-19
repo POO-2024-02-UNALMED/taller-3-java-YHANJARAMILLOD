@@ -26,23 +26,24 @@ public class Control {
     //Hay un problema con los metodos y restricciones del cambio de canales del televisor desde el control
     public void canalUp(){
         if(tv.getEstado()==true && tv.getCanal()>=1 && tv.getCanal()<120 && tv!=null ){
-            tv.setCanal(tv.getCanal()+1);
+            tv.setCanal(tv.canal+1);
         }
     }
     public void canalDown(){
         if(tv.getEstado()==true && tv.getCanal()>1 && tv.getCanal()<=120 && tv!=null ){
-            tv.setCanal(tv.getCanal()-1);
+            tv.setCanal(tv.canal-1);
         }
     }
- 
+ // public void setVolumen(int volumen){
+//      tv.setVolumen(volumen); copiate
     public void volumenUp(){
         if(tv.getEstado()==true && tv.getVolumen()>=0 && tv.getVolumen()<=6 && tv != null){
-            tv.setVolumen(tv.getVolumen()+1);
+            tv.setVolumen(tv.volumen+1);
         }    
     }
     public void volumenDown(){
         if(tv.getEstado()==true && tv.getVolumen()>=1 && tv.getVolumen()<=7 && tv != null){
-            tv.setVolumen(tv.getVolumen()-1);
+            tv.setVolumen(tv.volumen-1);
         }    
     }   
     public void setCanal(int canal){

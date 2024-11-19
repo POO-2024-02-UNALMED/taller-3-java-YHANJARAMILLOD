@@ -63,31 +63,31 @@ public class TV {
     //Hay un problema con los metodos y restricciones del cambio de canales del televisor 
     public int canalUp(){
         if(this.estado==true && canal>=1 && canal<120){
-            setCanal(getCanal()+1);
+            setCanal(this.canal+1);
             return canal;
         }
-        return getCanal();
+        return this.canal;
     }
     public int canalDown(){
         if(this.estado==true && canal>1 && canal<=120){
-            setCanal(getCanal()-1);
+            setCanal(this.canal-1);
             return canal;
         }
-        return getCanal();
+        return this.canal;
     }
     public int volumenUp(){
         if(this.estado==true && this.volumen>=0 && this.volumen<=6){
-            setVolumen(getVolumen()+1);
+            setVolumen(this.volumen+1);
             return volumen;
         }
-        return getVolumen(); 
+        return this.volumen; 
     }
     public int volumenDown(){
         if(this.estado==true && this.volumen>=1 && this.volumen<=7){
-            setVolumen(getVolumen()-1);
+            setVolumen(this.volumen-1);
             return volumen;
         }
-        return getVolumen();
+        return this.volumen;
     }   
     public static void setNumTV(int num){
         numTV=num;
