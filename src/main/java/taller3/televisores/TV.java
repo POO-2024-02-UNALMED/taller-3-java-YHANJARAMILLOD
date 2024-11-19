@@ -26,8 +26,13 @@ public class TV {
                 this.canal=canal;
             }
         }
-        return;
     }
+/*public void setCanal(int canal){
+    if (this.estado==true){
+        if (canal<=120 && canal>=1){
+            this.canal=canal;
+        }
+    }*/
     public int getCanal(){
         return canal;
     }
