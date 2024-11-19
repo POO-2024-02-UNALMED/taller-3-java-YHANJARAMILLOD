@@ -25,8 +25,8 @@ public class TV {
             if(this.canal>=1 && this.canal<=120){
                 this.canal=canal;
             }
-        return;
         }
+        return;
     }
     public int getCanal(){
         return canal;
