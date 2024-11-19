@@ -23,8 +23,9 @@ public class TV {
     public void setCanal(int canal){
         if(this.estado==true){
             if(this.canal>=1 && this.canal<=120){
-            this.canal=canal;
+                this.canal=canal;
             }
+        return;
         }
     }
     public int getCanal(){
@@ -65,8 +66,6 @@ public class TV {
     public void setEstado(boolean estado){
         this.estado=estado;
     }
-    //TestMetodos > testCanal() FAILED
-    //Hay un problema con los metodos y restricciones del cambio de canales del televisor 
     public void canalUp(){
         if(this.estado==true && canal>=1 && canal<120){
             setCanal(this.canal+1);
