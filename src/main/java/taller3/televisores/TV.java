@@ -21,7 +21,11 @@ public class TV {
         return marca;
     }
     public void setCanal(int canal){
-        this.canal=canal;
+        if(this.estado==true){
+            if(this.canal>=1 && this.canal<=120){
+            this.canal=canal;
+            }
+        }
     }
     public int getCanal(){
         return canal;
@@ -33,7 +37,9 @@ public class TV {
         return precio;
     }
     public void setVolumen(int volumen){
-        this.volumen=volumen;
+        if(this.estado==true && volumen>=0 && volumen<=7)
+            this.volumen=volumen;
+        return;
     }
     public int getVolumen(){
         return volumen;
@@ -61,33 +67,29 @@ public class TV {
     }
     //TestMetodos > testCanal() FAILED
     //Hay un problema con los metodos y restricciones del cambio de canales del televisor 
-    public int canalUp(){
+    public void canalUp(){
         if(this.estado==true && canal>=1 && canal<120){
             setCanal(this.canal+1);
-            return canal;
         }
-        return this.canal;
+        return;
     }
-    public int canalDown(){
+    public void canalDown(){
         if(this.estado==true && canal>1 && canal<=120){
             setCanal(this.canal-1);
-            return canal;
         }
-        return this.canal;
+        return;
     }
-    public int volumenUp(){
+    public void volumenUp(){
         if(this.estado==true && this.volumen>=0 && this.volumen<=6){
             setVolumen(this.volumen+1);
-            return volumen;
         }
-        return this.volumen; 
+        return; 
     }
-    public int volumenDown(){
+    public void volumenDown(){
         if(this.estado==true && this.volumen>=1 && this.volumen<=7){
             setVolumen(this.volumen-1);
-            return volumen;
         }
-        return this.volumen;
+        return;
     }   
     public static void setNumTV(int num){
         numTV=num;
