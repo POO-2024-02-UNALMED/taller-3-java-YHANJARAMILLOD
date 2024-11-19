@@ -21,18 +21,12 @@ public class TV {
         return marca;
     }
     public void setCanal(int canal){
-        if(this.estado==true){
-            if(this.canal>=1 && this.canal<=120){
-                this.canal=canal;
-            }
-        }
-    }
-/*public void setCanal(int canal){
-    if (this.estado==true){
-        if (canal<=120 && canal>=1){
+        if(this.estado==true && canal>=0 && canal<=7){
             this.canal=canal;
         }
-    }*/
+        return;
+
+    }
     public int getCanal(){
         return canal;
     }
